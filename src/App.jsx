@@ -5,6 +5,7 @@ import { darkTheme, lightTheme, screen } from './theme';
 import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './components/GlobalStyles';
 import Navbar from './components/Navbar';
+import Home from './pages/home';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -16,7 +17,7 @@ function App() {
       <Router>
         <Navbar toggleTheme={themeToggler} theme={theme} />
         <Routes>
-          <Route path='/' element={<h1>Hello React</h1>} />
+          <Route path='/' element={<Home />} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -1,0 +1,95 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const Card = ({ title, desc, artist }) => {
+  return (
+    <>
+      <StyledCard>
+        <h2>{title}</h2>
+        <p className='desc'>{desc}</p>
+        <div>
+          <p>
+            Written by <span>{artist}</span>
+          </p>
+          <p className='com'>See comments</p>
+        </div>
+      </StyledCard>
+    </>
+  );
+};
+
+Card.defaultProps = {
+  title: 'Title post',
+  desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, ex? Architecto minus exercitationem reiciendis! Ad suscipit similique sequi dolore corrupti.',
+  artist: 'Artist name'
+};
+
+export default Card;
+
+const StyledCard = styled.div`
+  background-color: ${({ theme }) => theme.card};
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  position: relative;
+  h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #719ef0;
+  }
+  p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    span {
+      color: #719ef0;
+    }
+  }
+  .desc {
+    margin-top: -50px;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    .com {
+      margin-right: 30px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.screen.lg}) {
+    h2 {
+      font-size: 1.4rem;
+    }
+    .desc {
+      margin-top: -30px;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.screen.sm}) {
+    h2 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 0.95rem;
+    }
+    .desc {
+      margin-top: -20px;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.screen.xs}) {
+    padding: 10px 5px;
+    min-height: 250px;
+    .desc {
+      margin-top: 0;
+    }
+    div {
+      flex-direction: column;
+    }
+  }
+`;
