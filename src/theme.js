@@ -8,7 +8,11 @@ export const darkTheme = {
   body: '#111419',
   text: '#ececec',
   navColor: '#3f4a5c',
-  card: '#2a313d'
+  card: '#2a313d',
+  btnText1: '#dee0e2',
+  btnText2: '#ececec',
+  btnBg1: '#5e6775',
+  btnBg2: '#57657e'
 };
 
 export const lightTheme = {
@@ -16,3 +20,5 @@ export const lightTheme = {
   text: '#000',
   navColor: '#1268af'
 };
+
+// ${({theme}) => theme.}

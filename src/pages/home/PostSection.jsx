@@ -61,7 +61,15 @@ const StyledButton = styled.div`
   button {
     cursor: pointer;
     font-size: 1.3rem;
-    padding: 5px 25px;
     margin: 0;
+    padding: 5px 50px;
+    border-radius: 9px;
+    border: 2px solid transparent;
+    color: ${({ theme }) => theme.btnText1};
+    background-color: ${({ theme }) => theme.btnBg1};
+    &:hover {
+      color: ${({ theme }) => theme.btnText2};
+      background-color: ${({ theme }) => theme.btnBg2};
+    }
   }
 `;
