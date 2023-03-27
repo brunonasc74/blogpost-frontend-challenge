@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import CommentModal from './CommentModal';
 
-const Card = ({ title, desc, artist }) => {
+const Card = ({ title, desc, artist, postId }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <>
       <StyledCard>
@@ -11,9 +18,18 @@ const Card = ({ title, desc, artist }) => {
           <p>
             Written by <span>{artist}</span>
           </p>
-          <p className='com'>See comments</p>
+          <p className='com' onClick={handleOpenModal}>
+            See comments
+          </p>
         </div>
       </StyledCard>
+      {isModalOpen && (
+        <CommentModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          postId={postId}
+        />
+      )}
     </>
   );
 };
@@ -40,14 +56,14 @@ const StyledCard = styled.div`
     margin: 0;
     font-size: 1.6rem;
     font-weight: normal;
-    color: #719ef0;
+    color: ${({ theme }) => theme.cardTxt};
   }
   p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.2rem;
     span {
-      color: #719ef0;
+      color: ${({ theme }) => theme.cardTxt};
     }
   }
   .desc {

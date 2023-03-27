@@ -42,6 +42,7 @@ const PostSection = () => {
               title={post.title}
               desc={post.body}
               artist={ownerPost.name}
+              postId={post.id}
             />
           );
         })}

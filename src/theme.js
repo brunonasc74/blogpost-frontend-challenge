@@ -9,6 +9,7 @@ export const darkTheme = {
   text: '#ececec',
   navColor: '#3f4a5c',
   card: '#2a313d',
+  cardTxt: '#719ef0;',
   btnText1: '#dee0e2',
   btnText2: '#ececec',
   btnBg1: '#5e6775',
