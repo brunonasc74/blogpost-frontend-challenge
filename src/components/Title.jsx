@@ -25,7 +25,7 @@ const StyledTitle = styled.div`
   .line {
     height: 2px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.text};
   }
 
   @media (max-width: ${({ theme }) => theme.screen.xs}) {

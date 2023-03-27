@@ -52,6 +52,7 @@ const StyledCard = styled.div`
   justify-content: space-between;
   min-height: 200px;
   position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   h2 {
     margin: 0;
     font-size: 1.6rem;

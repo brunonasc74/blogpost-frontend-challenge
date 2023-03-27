@@ -17,9 +17,13 @@ export const darkTheme = {
 };
 
 export const lightTheme = {
-  body: '#FFF',
+  body: '#fff',
   text: '#000',
-  navColor: '#1268af'
+  navColor: '#cfe3fc',
+  card: '#ebf4ff',
+  cardTxt: '#2c81c7;',
+  btnText1: '#ececec',
+  btnText2: '#fff',
+  btnBg1: '#4288c2',
+  btnBg2: '#3b9ef0'
 };
-
-// ${({theme}) => theme.}

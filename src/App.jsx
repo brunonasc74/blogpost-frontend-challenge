@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme, screen } from './theme';
+import { darkTheme, lightTheme, screen } from './components/Theme';
 import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './components/GlobalStyles';
 import Navbar from './components/Navbar';
