@@ -20,8 +20,6 @@ function App() {
         <Navbar toggleTheme={themeToggler} theme={theme} />
         <Routes>
           <Route path='/' element={<Home />} />
-        </Routes>
-        <Routes>
           <Route path='/authors' element={<Authors />} />
         </Routes>
         <Footer />
