@@ -6,10 +6,12 @@ export const screen = {
 
 export const darkTheme = {
   body: '#111419',
-  text: '#FFF'
+  text: '#ececec',
+  navColor: '#1c4669'
 };
 
 export const lightTheme = {
   body: '#FFF',
-  text: '#000'
+  text: '#000',
+  navColor: '#1268af'
 };
