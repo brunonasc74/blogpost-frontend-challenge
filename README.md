@@ -1,5 +1,7 @@
 # blogpost-frontend-challenge
 
+## [Poduction Preview](https://blogpost-frontend-challenge.vercel.app/)
+
 ## Running this project locally
 
 ```bash
