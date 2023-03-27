@@ -26,7 +26,7 @@ const Navbar = ({ toggleTheme, theme }) => {
             </Link>
           </li>
           <li>
-            <Link className='text' to='/'>
+            <Link className='text' to='/authors'>
               Authors
             </Link>
           </li>

@@ -1,17 +1,17 @@
 import React from 'react';
 import Container from '../../components/Container';
 import Title from '../../components/Title';
-import PostSection from './PostSection';
+import AuthorGallery from './AuthorGallery';
 
-const Home = () => {
+const Authors = () => {
   return (
     <>
       <Container>
-        <Title title={'All Posts'} />
-        <PostSection />
+        <Title title={'All Authors'} />
+        <AuthorGallery />
       </Container>
     </>
   );
 };
 
-export default Home;
+export default Authors;

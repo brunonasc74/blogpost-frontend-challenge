@@ -6,6 +6,7 @@ import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './components/GlobalStyles';
 import Navbar from './components/Navbar';
 import Home from './pages/home';
+import Authors from './pages/authors';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         <Navbar toggleTheme={themeToggler} theme={theme} />
         <Routes>
           <Route path='/' element={<Home />} />
+        </Routes>
+        <Routes>
+          <Route path='/authors' element={<Authors />} />
         </Routes>
         <Footer />
       </Router>
