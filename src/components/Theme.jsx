@@ -13,7 +13,8 @@ export const darkTheme = {
   btnText1: '#dee0e2',
   btnText2: '#ececec',
   btnBg1: '#5e6775',
-  btnBg2: '#57657e'
+  btnBg2: '#57657e',
+  footer: '#21517e'
 };
 
 export const lightTheme = {
@@ -25,5 +26,6 @@ export const lightTheme = {
   btnText1: '#ececec',
   btnText2: '#fff',
   btnBg1: '#4288c2',
-  btnBg2: '#3b9ef0'
+  btnBg2: '#3b9ef0',
+  footer: '#021924'
 };

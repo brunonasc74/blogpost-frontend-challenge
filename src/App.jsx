@@ -6,6 +6,7 @@ import useDarkMode from './hooks/useDarkMode';
 import GlobalStyles from './components/GlobalStyles';
 import Navbar from './components/Navbar';
 import Home from './pages/home';
+import Footer from './components/Footer';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   );
