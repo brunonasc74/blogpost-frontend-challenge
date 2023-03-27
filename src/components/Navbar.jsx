@@ -70,6 +70,7 @@ const StyledNavbar = styled.nav`
           bottom: 0;
           left: 20px;
           font-size: 1.7em;
+          cursor: pointer;
         }
         &:nth-child(2) {
           padding-left: 40px;

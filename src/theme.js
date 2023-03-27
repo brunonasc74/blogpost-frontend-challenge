@@ -7,7 +7,8 @@ export const screen = {
 export const darkTheme = {
   body: '#111419',
   text: '#ececec',
-  navColor: '#1c4669'
+  navColor: '#3f4a5c',
+  card: '#2a313d'
 };
 
 export const lightTheme = {
