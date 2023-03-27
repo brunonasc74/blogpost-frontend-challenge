@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import CommentModal from './CommentModal';
+import AuthorModal from './AuthorModal';
 
-const Card = ({ title, desc, artist, postId }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Card = ({ title, desc, artist, postId, userId }) => {
+  const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
+  const [isAuthorModalOpen, setIsAuthorModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
+  const handleOpenCommentModal = () => {
+    setIsCommentModalOpen(true);
+  };
+
+  const handleOpenAuthorModal = () => {
+    setIsAuthorModalOpen(true);
   };
 
   return (
@@ -16,18 +22,25 @@ const Card = ({ title, desc, artist, postId }) => {
         <p className='desc'>{desc}</p>
         <div>
           <p>
-            Written by <span>{artist}</span>
+            Written by <span onClick={handleOpenAuthorModal}>{artist}</span>
           </p>
-          <p className='com' onClick={handleOpenModal}>
+          <p className='com' onClick={handleOpenCommentModal}>
             See comments
           </p>
         </div>
       </StyledCard>
-      {isModalOpen && (
+      {isCommentModalOpen && (
         <CommentModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          isOpen={isCommentModalOpen}
+          onClose={() => setIsCommentModalOpen(false)}
           postId={postId}
+        />
+      )}
+      {isAuthorModalOpen && (
+        <AuthorModal
+          isOpen={isAuthorModalOpen}
+          onClose={() => setIsAuthorModalOpen(false)}
+          userId={userId}
         />
       )}
     </>
@@ -65,6 +78,10 @@ const StyledCard = styled.div`
     line-height: 1.2rem;
     span {
       color: ${({ theme }) => theme.cardTxt};
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   .desc {

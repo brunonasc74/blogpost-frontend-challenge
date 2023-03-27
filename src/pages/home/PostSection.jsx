@@ -34,15 +34,16 @@ const PostSection = () => {
   return (
     <>
       {posts &&
-        posts.slice(0, numLoaded).map((post, index) => {
+        posts.slice(0, numLoaded).map((post) => {
           const ownerPost = users.find((user) => user.id === post.userId);
           return (
             <Card
-              key={index}
+              key={post.id}
               title={post.title}
               desc={post.body}
               artist={ownerPost.name}
               postId={post.id}
+              userId={post.userId}
             />
           );
         })}
