@@ -31,6 +31,7 @@ const AuthorGallery = () => {
                 key={user.id}
                 name={user.name}
                 username={user.username}
+                userId={user.id}
               />
             );
           })}

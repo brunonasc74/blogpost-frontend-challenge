@@ -1,15 +1,32 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import AuthorModal from '../../components/AuthorModal';
 
-const AuthorCard = ({ name, username }) => {
+const AuthorCard = ({ name, username, userId }) => {
+  const [isAuthorModalOpen, setIsAuthorModalOpen] = useState(false);
+
+  const handleOpenAuthorModal = () => {
+    setIsAuthorModalOpen(true);
+  };
+
   return (
-    <StyledCard>
-      <h1>
-        <span>Name:</span> {name}
-      </h1>
-      <h2>
-        <span>Username:</span> {username}
-      </h2>
-    </StyledCard>
+    <>
+      <StyledCard onClick={handleOpenAuthorModal}>
+        <h1>
+          <span>Name:</span> {name}
+        </h1>
+        <h2>
+          <span>Username:</span> {username}
+        </h2>
+      </StyledCard>
+      {isAuthorModalOpen && (
+        <AuthorModal
+          isOpen={isAuthorModalOpen}
+          onClose={() => setIsAuthorModalOpen(false)}
+          userId={userId}
+        />
+      )}
+    </>
   );
 };
 
